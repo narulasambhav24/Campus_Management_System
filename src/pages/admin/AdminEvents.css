@@ -1,0 +1,107 @@
+.admin-event-form {
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.admin-event-form-heading {
+  font-weight: 700;
+  color: #1a1e2e;
+  margin-bottom: 12px;
+}
+
+.admin-event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-event-field {
+  color: #3a4060;
+  display: grid;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 6px;
+}
+
+.admin-event-form-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.event-poster-thumb {
+  width: 86px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dde1eb;
+}
+
+.event-poster-empty {
+  color: #6b7491;
+  font-size: 0.82rem;
+}
+
+.event-poster-upload {
+  display: grid;
+  gap: 6px;
+}
+
+.event-poster-upload input[type='file'] {
+  font-size: 0.78rem;
+  max-width: 190px;
+}
+
+.admin-event-row-actions {
+  display: grid;
+  gap: 6px;
+}
+
+.admin-registration-log-card {
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.admin-log-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.admin-log-header h2 {
+  color: #12182b;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.admin-log-header p,
+.admin-log-muted {
+  color: #6b7491;
+  font-size: 0.82rem;
+}
+
+.admin-log-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-log-status {
+  display: inline-flex;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 9px;
+  text-transform: uppercase;
+}
+
+.admin-log-status-success {
+  background: #e7f7ed;
+  color: #14783e;
+}
+
+.admin-log-status-failure {
+  background: #fff0ee;
+  color: #b42318;
+}

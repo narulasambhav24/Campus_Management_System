@@ -1,0 +1,190 @@
+/* ===== Admin Dashboard ===== */
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-span-full {
+  grid-column: 1 / -1;
+}
+
+.admin-stat-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.admin-stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.admin-stat-icon {
+  font-size: 1.6rem;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-stat-card.total .admin-stat-icon { background: var(--blue-light); }
+.admin-stat-card.pending .admin-stat-icon { background: var(--amber-light); }
+.admin-stat-card.progress .admin-stat-icon { background: #e8f4fd; }
+.admin-stat-card.resolved .admin-stat-icon { background: var(--green-light); }
+
+.admin-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  line-height: 1;
+}
+
+.admin-stat-label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+/* Filters */
+.admin-filters {
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Imported from MyRequests styles */
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition);
+  background: var(--gray-50);
+}
+.search-input:focus {
+  border-color: var(--navy);
+  background: white;
+}
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+.filter-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-chip {
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-chip:hover { border-color: var(--navy); color: var(--navy); }
+.filter-chip.active { background: var(--navy); border-color: var(--navy); color: white; }
+
+.table-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.table-count { font-size: 0.875rem; color: var(--gray-500); font-weight: 500; }
+.table-scroll { overflow-x: auto; }
+
+.req-id-cell {
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--blue-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.category-chip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.req-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--navy-dark);
+  margin-bottom: 2px;
+}
+.req-desc-preview { font-size: 0.78rem; color: var(--gray-300); }
+.date-cell { white-space: nowrap; color: var(--gray-500) !important; font-size: 0.85rem !important; }
+
+/* Student cell */
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.student-mini-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Updating row */
+.updating td {
+  opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+  .filter-row { flex-direction: column; gap: 12px; }
+}

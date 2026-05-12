@@ -1,0 +1,67 @@
+[
+  {
+    "id": "REQ-006",
+    "studentId": "narulasambhav24@gmail.com",
+    "studentName": "Sambhav Narula",
+    "category": "Academic",
+    "title": "i want to update my email address in the university records",
+    "description": "wanted help to change my email address in the uni records",
+    "status": "Resolved",
+    "createdAt": "2026-04-19T08:44:19.622Z",
+    "updatedAt": "2026-04-21T11:17:33.230Z"
+  },
+  {
+    "id": "REQ-001",
+    "studentId": "demo@student.edu",
+    "studentName": "Alex Johnson",
+    "category": "IT",
+    "title": "Wi-Fi not working in Room 204",
+    "description": "Internet connection has been down for 2 days in my dorm room.",
+    "status": "Resolved",
+    "createdAt": "2024-11-01T10:00:00Z"
+  },
+  {
+    "id": "REQ-002",
+    "studentId": "demo@student.edu",
+    "studentName": "Alex Johnson",
+    "category": "Hostel",
+    "title": "Broken window latch",
+    "description": "The window latch in Room 204 is broken and cannot be secured.",
+    "status": "Resolved",
+    "createdAt": "2024-11-05T14:30:00Z",
+    "updatedAt": "2026-04-19T08:05:06.420Z"
+  },
+  {
+    "id": "REQ-003",
+    "studentId": "demo@student.edu",
+    "studentName": "Alex Johnson",
+    "category": "Academic",
+    "title": "Grade discrepancy in CS301",
+    "description": "My midterm grade appears incorrect. I scored 87 but 72 is recorded.",
+    "status": "Resolved",
+    "createdAt": "2024-11-10T09:15:00Z",
+    "updatedAt": "2026-04-19T08:05:08.392Z"
+  },
+  {
+    "id": "REQ-004",
+    "studentId": "other@student.edu",
+    "studentName": "Maria Chen",
+    "category": "Administration",
+    "title": "ID card replacement",
+    "description": "My student ID card was lost and I need a replacement.",
+    "status": "Resolved",
+    "createdAt": "2024-11-11T11:00:00Z",
+    "updatedAt": "2026-04-21T18:13:33.105Z"
+  },
+  {
+    "id": "REQ-005",
+    "studentId": "other@student.edu",
+    "studentName": "Maria Chen",
+    "category": "IT",
+    "title": "Portal login issue",
+    "description": "Cannot access the student portal since the password reset.",
+    "status": "Resolved",
+    "createdAt": "2024-11-12T08:45:00Z",
+    "updatedAt": "2026-04-21T18:13:35.674Z"
+  }
+]

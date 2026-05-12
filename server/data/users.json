@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alex Johnson",
+    "email": "demo@student.edu",
+    "password": "password123",
+    "role": "student"
+  },
+  {
+    "name": "Admin User",
+    "email": "admin@unihelp.edu",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "name": "Sambhav Narula",
+    "email": "narulasambhav24@gmail.com",
+    "password": "123456",
+    "role": "student"
+  },
+  {
+    "name": "Rehaan Narang",
+    "email": "rehaannarang1010@gmail.com",
+    "password": "000111",
+    "role": "admin"
+  }
+]

@@ -1,0 +1,49 @@
+.request-detail-back {
+  margin-bottom: 16px;
+}
+
+.request-detail-card {
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.request-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.request-detail-label {
+  color: #6b7491;
+  font-size: 0.86rem;
+  margin-bottom: 6px;
+}
+
+.request-detail-value {
+  color: #19213d;
+  font-size: 0.98rem;
+}
+
+.request-detail-block + .request-detail-block {
+  margin-top: 12px;
+}
+
+.request-attachment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.request-attachment-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: #2e5bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.request-attachment-item:hover {
+  text-decoration: underline;
+}

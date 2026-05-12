@@ -1,0 +1,14 @@
+### Test Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "demo@student.edu",
+  "password": "password123"
+}
+
+### Test Get All Requests
+GET http://localhost:5000/api/requests
+
+### Test Get User Requests
+GET http://localhost:5000/api/requests/user/demo@student.edu
