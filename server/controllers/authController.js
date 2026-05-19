@@ -36,7 +36,7 @@ const login = asyncHandler(async (req, res) => {
 });
 
 const signup = asyncHandler(async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
     throw createAppError('Name, email, and password are required', 400);
@@ -53,7 +53,7 @@ const signup = asyncHandler(async (req, res) => {
     name: name.trim(),
     email: normalizedEmail,
     password: await bcrypt.hash(password, 10),
-    role: role || 'student',
+    role: 'student',
   });
 
   res.status(201).json(buildAuthResponse(user, 'Account created successfully'));

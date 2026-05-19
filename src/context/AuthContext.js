@@ -55,10 +55,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const signup = async (name, email, password, role = 'student') => {
+  const signup = async (name, email, password) => {
     try {
       setError(null);
-      const response = await authAPI.signup(name, email, password, role);
+      const response = await authAPI.signup(name, email, password);
       setToken(response.token);
       setSession(response.user);
       setUser(response.user);

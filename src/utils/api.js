@@ -56,8 +56,8 @@ export const authAPI = {
   login: (email, password) =>
     apiCall('/auth/login', 'POST', { email, password }),
 
-  signup: (name, email, password, role = 'student') =>
-    apiCall('/auth/signup', 'POST', { name, email, password, role }),
+  signup: (name, email, password) =>
+    apiCall('/auth/signup', 'POST', { name, email, password }),
 
   me: () =>
     apiCall('/auth/me', 'GET'),

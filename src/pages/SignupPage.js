@@ -5,7 +5,7 @@ import { getDefaultRoute } from '../utils/auth';
 import './AuthPage.css';
 
 export default function SignupPage() {
-  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '', role: 'student' });
+  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' });
   const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -24,8 +24,8 @@ export default function SignupPage() {
   };
 
   const handleChange = (event) => {
-    setForm(previous => ({ ...previous, [event.target.name]: event.target.value }));
-    setErrors(previous => ({ ...previous, [event.target.name]: '' }));
+    setForm((previous) => ({ ...previous, [event.target.name]: event.target.value }));
+    setErrors((previous) => ({ ...previous, [event.target.name]: '' }));
     setApiError('');
   };
 
@@ -39,7 +39,7 @@ export default function SignupPage() {
 
     setLoading(true);
     try {
-      const newUser = await signup(form.name, form.email, form.password, form.role);
+      const newUser = await signup(form.name, form.email, form.password);
       navigate(getDefaultRoute(newUser), { replace: true });
     } catch (error) {
       setApiError(error.message || 'Signup failed. Please try again.');
@@ -69,8 +69,8 @@ export default function SignupPage() {
       <div className="auth-right">
         <div className="auth-form-container animate-fade-up">
           <div className="auth-form-header">
-            <h1 className="auth-form-title">Create account</h1>
-            <p className="auth-form-sub">Join UniHelp to get started</p>
+            <h1 className="auth-form-title">Create student account</h1>
+            <p className="auth-form-sub">New accounts are created as student accounts.</p>
           </div>
 
           {apiError && <div className="alert alert-error">{apiError}</div>}
@@ -128,24 +128,8 @@ export default function SignupPage() {
               {errors.confirm && <span className="form-error">{errors.confirm}</span>}
             </div>
 
-            <div className="form-group">
-              <label className="form-label">Register as</label>
-              <div className="role-toggle">
-                {['student', 'admin'].map(role => (
-                  <button
-                    key={role}
-                    type="button"
-                    className={`role-btn ${form.role === role ? 'active' : ''}`}
-                    onClick={() => setForm(previous => ({ ...previous, role }))}
-                  >
-                    {role === 'student' ? '🎓 Student' : '🛠 Admin'}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
-              {loading ? <span className="btn-spinner" /> : 'Create Account'}
+              {loading ? <span className="btn-spinner" /> : 'Create Student Account'}
             </button>
           </form>
 

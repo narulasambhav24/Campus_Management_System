@@ -94,38 +94,6 @@
   font-size: 0.95rem;
 }
 
-/* Role Toggle */
-.role-toggle {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.role-btn {
-  padding: 10px;
-  border: 1.5px solid var(--gray-200);
-  border-radius: var(--radius-sm);
-  background: var(--white);
-  color: var(--gray-500);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.role-btn.active {
-  border-color: var(--navy);
-  background: var(--blue-light);
-  color: var(--navy);
-  font-weight: 600;
-}
-
-.role-btn:hover:not(.active) {
-  border-color: var(--gray-300);
-  background: var(--gray-50);
-}
-
 /* Block button */
 .btn-block {
   width: 100%;

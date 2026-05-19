@@ -5,7 +5,7 @@ import { getDefaultRoute } from '../utils/auth';
 import './AuthPage.css';
 
 export default function LoginPage() {
-  const [form, setForm] = useState({ email: '', password: '', role: 'student' });
+  const [form, setForm] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -21,8 +21,8 @@ export default function LoginPage() {
   };
 
   const handleChange = (event) => {
-    setForm(previous => ({ ...previous, [event.target.name]: event.target.value }));
-    setErrors(previous => ({ ...previous, [event.target.name]: '' }));
+    setForm((previous) => ({ ...previous, [event.target.name]: event.target.value }));
+    setErrors((previous) => ({ ...previous, [event.target.name]: '' }));
     setApiError('');
   };
 
@@ -97,22 +97,6 @@ export default function LoginPage() {
                 onChange={handleChange}
               />
               {errors.password && <span className="form-error">{errors.password}</span>}
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Sign in as</label>
-              <div className="role-toggle">
-                {['student', 'admin'].map(role => (
-                  <button
-                    key={role}
-                    type="button"
-                    className={`role-btn ${form.role === role ? 'active' : ''}`}
-                    onClick={() => setForm(previous => ({ ...previous, role }))}
-                  >
-                    {role === 'student' ? '🎓 Student' : '🛠 Admin'}
-                  </button>
-                ))}
-              </div>
             </div>
 
             <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
