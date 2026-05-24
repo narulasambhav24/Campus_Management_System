@@ -70,7 +70,7 @@ export default function SignupPage() {
         <div className="auth-form-container animate-fade-up">
           <div className="auth-form-header">
             <h1 className="auth-form-title">Create student account</h1>
-            <p className="auth-form-sub">New accounts are created as student accounts.</p>
+            <p className="auth-form-sub">Join UniHelp to get started.</p>
           </div>
 
           {apiError && <div className="alert alert-error">{apiError}</div>}

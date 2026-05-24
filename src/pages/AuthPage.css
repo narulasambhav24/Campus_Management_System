@@ -119,17 +119,6 @@
   animation: spin 0.7s linear infinite;
 }
 
-/* Demo hint */
-.auth-demo-hint {
-  margin-top: 20px;
-  padding: 14px;
-  background: var(--blue-light);
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  color: var(--gray-700);
-  line-height: 1.7;
-}
-
 /* Switch link */
 .auth-switch {
   text-align: center;

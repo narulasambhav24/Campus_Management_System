@@ -104,12 +104,6 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="auth-demo-hint">
-            <strong>Demo accounts:</strong><br />
-            Student: demo@student.edu / password123<br />
-            Admin: admin@unihelp.edu / admin123
-          </div>
-
           <p className="auth-switch">
             Don't have an account? <Link to="/signup">Create one</Link>
           </p>
